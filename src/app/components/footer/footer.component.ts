@@ -7,20 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-    showPolitics: boolean;
-    showAboutUs: boolean;
-
     constructor() { }
 
     ngOnInit(): void {
     }
 
-
-    togglePolitics() {
-        this.showPolitics = !this.showPolitics;
-    }
-
-    toggleAboutUs() {
-        this.showAboutUs = !this.showAboutUs;
-    }
 }
