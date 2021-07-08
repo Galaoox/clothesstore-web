@@ -1,6 +1,7 @@
 .grid-layout {
     display: grid;
     height: 100vh;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100vw;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+    margin-top: 9.5rem;
 }
