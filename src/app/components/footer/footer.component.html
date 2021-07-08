@@ -1,0 +1,42 @@
+<footer>
+    <div class="grid">
+        <div class="section-footer">
+            <div class="title-container" (click)="togglePolitics()">
+                <h2 class="title">POLÍTICAS</h2>
+                <span class="icon-toggle">{{showPolitics ? '-' : '+'}}</span>
+            </div>
+            <div class="content" [ngClass]="{'show': showPolitics}">
+                <ul>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Políticas de cambio</a></li>
+                    <li><a href="#">Políticas de envío</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Responsabilidad social</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-footer">
+            <div class="title-container" (click)="toggleAboutUs()">
+                <h2 class="title">SOBRE NOSOTROS</h2>
+                <span class="icon-toggle">{{showAboutUs ? '-' : '+'}}</span>
+            </div>
+            <div class="content" [ngClass]="{'show': showAboutUs}">
+                <ul>
+                    <li><a href="#">Encuentra tu tienda</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-footer">
+            <h2 class="title">SÍGUENOS EN:</h2>
+            <div class="content-icons">
+                <a href="#"><img class="icon-social" src="/assets/img/icon-facebook.svg" alt=""></a>
+                <a href="#"><img class="icon-social" src="/assets/img/icon-twitter.svg" alt=""></a>
+                <a href="#"><img class="icon-social" src="/assets/img/icon-instagram.svg" alt=""></a>
+                <a href="#"><img class="icon-social" src="/assets/img/icon-youtube.svg" alt=""></a>
+
+            </div>
+        </div>
+    </div>
+</footer>
