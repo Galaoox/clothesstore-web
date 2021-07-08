@@ -35,9 +35,11 @@ header {
 .menu-desktop > ul > li {
     list-style: none;
     font-weight: bold;
-}
-.menu-desktop > ul > li {
     padding: 0 3rem;
+}
+.menu-desktop > ul > li > a {
+    text-decoration: none;
+    color: var(--white);
 }
 
 .menu-desktop > ul > li:nth-child(n + 1):nth-child(-n + 5) {
