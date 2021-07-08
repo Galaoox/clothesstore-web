@@ -123,10 +123,130 @@ header {
     justify-content: center;
 }
 
+.btn-search:hover {
+    background-color: #a19e9e;
+}
+
 .icon-button {
     width: 1rem;
 }
 
 .menu-mobile {
     display: none;
+    grid-area: menu;
+}
+
+#hamburguer-menu {
+    display: none;
+    width: 90vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background-color: var(--white);
+    box-shadow: 1px 0 3px 0 var(--light-black);
+    padding-left: 2rem;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.button-close-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-close-container > img {
+    width: 1.3rem;
+    margin: 1rem 1rem 0 0;
+    height: 1.3rem;
+}
+
+#hamburguer-menu > ul {
+    margin-top: 1rem;
+}
+
+#hamburguer-menu > ul > li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+#hamburguer-menu > ul > li > a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .search-bar {
+        padding: 1rem;
+    }
+
+    .menu-desktop > ul > li {
+        list-style: none;
+        font-weight: bold;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        box-shadow: 0px 0px 3px 0px var(--light-black);
+    }
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+        width: 3rem;
+    }
+
+    .grid {
+        grid-template-areas:
+            "menu logo logo cart"
+            "input input input input";
+        grid-template-columns: none;
+        height: 7rem;
+        gap: 0px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+
+    .search-bar {
+        padding: 0.5rem 1rem 0 1rem;
+    }
+
+    .cart {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .account {
+        display: none;
+    }
+
+    .btn-sigin {
+        display: none;
+    }
+    .input-group {
+        margin-bottom: 0.5rem;
+    }
+
+    #hamburguer-menu.show {
+        display: block;
+        opacity: 1;
+        animation: fadein 0.3s;
+    }
 }
