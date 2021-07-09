@@ -1,17 +1,21 @@
 <h1 id="title-carousel">PRODUCTOS MÁS BUSCADOS</h1>
+
 <div class="grid-carousel">
-    <button class="btn left">
-        <img src="/assets/img/icon-left-arrow-black.svg" alt="">
+    <button class="btn left" (click)="carousel.previous()">
+        <img src="/assets/img/icon-left-arrow-black.svg" alt="icon-left-arrow">
     </button>
 
-    <div class="container-carousel">
-        <ng-container *ngFor="let product of products">
-            <app-card-product [id]="product.id" [price]="product.price" [title]="product.title"
-                [img]="product.thumbnail" class="item-carousel">
-            </app-card-product>
-        </ng-container>
+    <div class="" style="overflow: hidden;">
+
+        <owl-carousel #carousel [options]="carouselOptions" [items]="products">
+            <ng-container *ngFor="let product of products;let i= index">
+                <app-card-product [id]="product.id" [price]="product.price" [title]="product.title"
+                    [img]="product.thumbnail" class="item-carousel">
+                </app-card-product>
+            </ng-container>
+        </owl-carousel>
     </div>
-    <button class="btn rigth">
-        <img src="/assets/img/icon-rigth-arrow-black.svg" alt="">
+    <button class="btn rigth" (click)="carousel.next()">
+        <img src="/assets/img/icon-rigth-arrow-black.svg" alt="icon-rigth-arrow">
     </button>
 </div>

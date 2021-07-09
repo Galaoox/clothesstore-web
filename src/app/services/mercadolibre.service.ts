@@ -19,10 +19,12 @@ export class MercadolibreService {
 
     constructor(private http: HttpClient) { }
 
-    getRandomProducts(params: any = {}): Observable<any> {
+    getRandomProducts(): Observable<any> {
         return this.http.get<any>(this.url + this.path, {
             params: {
-                category: this.idCategory
+                category: this.idCategory,
+                limit: this.random(4, 20),
+                offset: this.random(1, 40)
             },
             headers: this.headers,
         });
@@ -36,5 +38,9 @@ export class MercadolibreService {
             },
             headers: this.headers,
         });
+    }
+
+    random(min, max) {
+        return Math.floor((Math.random() * (max - min + 1)) + min).toString();
     }
 }

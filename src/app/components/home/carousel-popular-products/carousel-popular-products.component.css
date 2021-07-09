@@ -61,4 +61,8 @@
     #title-carousel {
         font-size: 1.2rem;
     }
+
+    .owl-item {
+        margin: auto !important;
+    }
 }

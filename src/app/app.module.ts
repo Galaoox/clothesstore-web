@@ -12,6 +12,7 @@ import { CarouselBannersComponent } from './components/home/carousel-banners/car
 import { InfoSectionComponent } from './components/home/info-section/info-section.component';
 import { CarouselPopularProductsComponent } from './components/home/carousel-popular-products/carousel-popular-products.component';
 import { CardProductComponent } from './components/card-product/card-product.component';
+import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import { CardProductComponent } from './components/card-product/card-product.com
         AppRoutingModule,
         BrowserAnimationsModule,
         HttpClientModule,
+        OwlModule
     ],
     providers: [],
     bootstrap: [AppComponent]

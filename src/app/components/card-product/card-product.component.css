@@ -7,6 +7,7 @@
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0;
     width: 15rem;
+    margin: auto;
 }
 
 .card > .img {
@@ -15,6 +16,7 @@
 
 .img > img {
     width: 100%;
+    height: 100%;
 }
 
 .card > .content > .title {
@@ -25,6 +27,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    height: 2rem;
 }
 
 .card > .content {
