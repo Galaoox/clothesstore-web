@@ -1,12 +1,4 @@
-<div *ngIf="true">
-
-    <!-- call and custom spinner -->
-    <app-self-building-square-spinner [animationDuration]="1500" [size]="70" [color]="'#C468CF'">
-    </app-self-building-square-spinner>
-
-</div>
-
-<div *ngIf="products.length; else listEmpty" class="grid-products">
+<div *ngIf="products.length && !isLoading; else listEmpty" class="grid-products">
 
     <ng-container *ngFor="let product of products;let i= index">
         <app-card-product [id]="product.id" [price]="product.price" [title]="product.title" [img]="product.thumbnail">
@@ -16,7 +8,7 @@
 </div>
 
 <ng-template #listEmpty>
-    <div class="empty">
+    <div class="empty" *ngIf="!isLoading">
         <h1>No se encontraron productos</h1>
     </div>
 </ng-template>
