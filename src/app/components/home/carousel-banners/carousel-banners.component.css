@@ -1,5 +1,19 @@
+#carousel {
+    position: relative;
+}
+
 .img-carousel {
     width: 100%;
+}
+
+.buttons-slide {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    z-index: 9;
 }
 
 .arrow {
@@ -9,9 +23,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9;
-    bottom: 24vh;
-    position: absolute;
     border: 0;
 }
 
@@ -20,17 +31,8 @@
     height: 4rem;
 }
 
-.arrow.rigth {
-    right: 2rem;
-}
-
-.arrow.left {
-    left: 2rem;
-}
-
 @media screen and (max-width: 768px) {
     .arrow {
-        bottom: 35vh;
         width: 4rem;
         height: 4rem;
     }
@@ -38,37 +40,15 @@
         width: 2rem;
         height: 3rem;
     }
-
-    .arrow.rigth {
-        right: 1.5rem;
-    }
-
-    .arrow.left {
-        left: 1.5rem;
-    }
 }
 
 @media screen and (max-width: 480px) {
     .arrow {
-        bottom: 41vh;
         width: 2rem;
         height: 2rem;
     }
     .arrow > img {
         width: 1rem;
         height: 1.5rem;
-    }
-    .arrow.rigth {
-        right: 1rem;
-    }
-
-    .arrow.left {
-        left: 1rem;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .arrow {
-        bottom: 50vh;
     }
 }

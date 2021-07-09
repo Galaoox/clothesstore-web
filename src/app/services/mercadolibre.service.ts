@@ -23,7 +23,7 @@ export class MercadolibreService {
         return this.http.get<any>(this.url + this.path, {
             params: {
                 category: this.idCategory,
-                limit: this.random(4, 20),
+                limit: this.random(4, 10),
                 offset: this.random(1, 40)
             },
             headers: this.headers,
