@@ -4,6 +4,7 @@ header {
     top: 0;
     margin-bottom: auto;
     width: 100%;
+    z-index: 10;
 }
 .grid {
     max-width: none;
