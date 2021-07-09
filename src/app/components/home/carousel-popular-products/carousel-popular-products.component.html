@@ -6,7 +6,9 @@
 
     <div class="container-carousel">
         <ng-container *ngFor="let product of products">
-            <app-card-product class="item-carousel"></app-card-product>
+            <app-card-product [id]="product.id" [price]="product.price" [title]="product.title"
+                [img]="product.thumbnail" class="item-carousel">
+            </app-card-product>
         </ng-container>
     </div>
     <button class="btn rigth">

@@ -1,12 +1,11 @@
 <div class="card">
     <div class="img">
-        <img src="/assets/img/test-img.png" alt="">
-
+        <img [src]="img" alt="">
     </div>
     <div class="content">
-        <h5 class="title">Blusa color sólido manga larga Talla M</h5>
+        <h5 class="title" [title]="title">{{title}}</h5>
         <div class="container-prices">
-            <p>$200.452</p>
+            <p>{{replaceComma(price | currency : 'USD' : 'symbol' : '1.0-0')}}</p>
             <p>$100.452</p>
         </div>
         <button class="btn-cart" type="button">

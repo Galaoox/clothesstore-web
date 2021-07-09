@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-card-product',
-  templateUrl: './card-product.component.html',
-  styleUrls: ['./card-product.component.css']
+    selector: 'app-card-product',
+    templateUrl: './card-product.component.html',
+    styleUrls: ['./card-product.component.css']
 })
 export class CardProductComponent implements OnInit {
+    @Input() price: string;
+    @Input() title: string;
+    @Input() id: string;
+    @Input() img: string;
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
+
+
+    replaceComma(value) {
+        return value.replace(/,/g, '.')
+    }
 
 }
