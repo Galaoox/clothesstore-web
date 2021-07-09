@@ -34,7 +34,7 @@ export class MercadolibreService {
         return this.http.get<any>(this.url + this.path, {
             params: {
                 category: this.idCategory,
-                search
+                q: search
             },
             headers: this.headers,
         });

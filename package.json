@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~11.2.4",
     "@angular/platform-browser-dynamic": "~11.2.4",
     "@angular/router": "~11.2.4",
+    "angular-epic-spinners": "^2.0.0",
     "jquery": "^3.6.0",
     "ngx-owl-carousel": "^2.0.7",
     "rxjs": "~6.6.0",

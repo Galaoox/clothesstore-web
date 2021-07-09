@@ -1,12 +1,15 @@
 <header>
     <nav class="grid search-bar">
         <img #menuIcon class="menu-mobile" src="/assets/img/menu-mobile.svg" alt="">
-        <h1 class="title"><a href="#">ClothesStore</a></h1>
-        <div class="input-group">
-            <input type="search" placeholder="Buscar aquí producto" class="form-control" />
+        <h1 class="title"><a [routerLink]="['/']">ClothesStore</a></h1>
+
+        <form [formGroup]="frm" class="input-group" (ngSubmit)="onSubmit()">
+            <input type="search" placeholder="Buscar aquí producto" required class="form-control"
+                formControlName="search" />
             <button class="btn-search" type="submit"><img class="icon-button" src="/assets/img/icon-search.svg"
                     alt=""></button>
-        </div>
+        </form>
+
         <img class="cart" src="/assets/img/icon-cart.svg" alt="">
         <img class="account" src="/assets/img/icon-user.svg" alt="">
         <button type="button" class="btn-sigin">Iniciar sesión</button>

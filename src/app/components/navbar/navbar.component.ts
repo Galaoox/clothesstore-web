@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
@@ -11,7 +12,11 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     @ViewChild('closeIcon') closeIcon: ElementRef;
 
 
-    constructor(private renderer2: Renderer2) { }
+    frm: FormGroup = this.fb.group({
+        search: ['', [Validators.required]]
+    })
+
+    constructor(private renderer2: Renderer2, private fb: FormBuilder, private router: Router) { }
 
     ngOnInit(): void {
     }
@@ -37,6 +42,12 @@ export class NavbarComponent implements OnInit, AfterViewInit {
             this.renderer2.removeClass(document.body, 'noscroll');
             this.renderer2.removeClass(asHamburguerMenu, 'show');
         });
+    }
+
+    onSubmit(): void {
+        if (this.frm.valid) {
+            this.router.navigate(['/list'], { queryParams: { search: this.frm.get('search').value } });
+        }
     }
 
 }

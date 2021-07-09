@@ -1,6 +1,9 @@
 <div class="card">
     <div class="img">
         <img [src]="img" alt="producto">
+        <div class="text-block" *ngIf="showDiscount()">
+            <p>-50%</p>
+        </div>
     </div>
     <div class="content">
         <h5 class="title" [title]="title">{{title}}</h5>

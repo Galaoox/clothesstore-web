@@ -21,4 +21,8 @@ export class CardProductComponent implements OnInit {
         return value.replace(/,/g, '.')
     }
 
+    showDiscount() {
+        return this.title.length % 2 == 0;
+    }
+
 }
